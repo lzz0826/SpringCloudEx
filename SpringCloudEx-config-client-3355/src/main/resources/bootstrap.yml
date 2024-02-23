@@ -1,0 +1,23 @@
+#bootstrap.yml 系統最高優先級配置文件
+spring:
+  cloud:
+    config:
+      name: SpringCloudEx-config-client #需要從github上讀取的支援名稱(沒yml後綴)
+      profile: dev #本次訪問的配置項
+      label: main #分之名
+      uri: http://config-3344.com:3344 #config-3344.com(hosts 127.0.0.1)
+      # 本微服務啟動後先去找3344服務 通過SpringCloudConfig獲取Git的服務地址
+      # 如上面配置無法找到對應會先使用application.yml 如果還是沒有
+      # 會報 BeanCreationException 錯誤 注意:會跟版本錯誤搞混
+
+
+
+
+
+
+
+
+
+
+
+

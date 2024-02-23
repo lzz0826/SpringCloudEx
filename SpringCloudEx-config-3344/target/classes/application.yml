@@ -1,0 +1,27 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: SpringCloudEx-config #服務名*服務註冊與發現時使用 如果是多台會共用名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lzz0826/SpringCloudEx-config.git #GitHub上的git倉庫名
+          default-label: main
+          proxy: # 代理配置的開始標識 (以下是github無法連線上時加上代理)
+            http: # 指定了要配置的代理服務器是 HTTP 代理服務器
+              host: localhost # 指定代理服務器的主機地址為本地主機（即本機）
+              port: 3128 # 指定代理服務器的端口號為 3128，這是代理服務器監聽客戶端連接的端口
+
+
+
+
+
+
+
+
+
+
+

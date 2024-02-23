@@ -1,0 +1,22 @@
+server:
+  port: 7002
+
+eureka:
+  instance:
+#    hostname: localhost #eureka服務端的實例名稱
+  hostname: eureka7002.com #eureka服務端的實例名稱
+
+  client:
+    register-with-eureka: false #false 表示不向註冊中心註冊自己
+    fetch-registry: false # false 表示自己端就是註冊中心 職責是維護服務實例 並不需要去檢索服務
+    service-url:
+      #集群
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
+#      #單機
+##      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #設置與Eureka Server交互的地址查詢服務和註冊
+
+
+
+
+
+

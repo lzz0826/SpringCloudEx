@@ -1,0 +1,50 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: SpringCloudEx-dept #服務名*服務註冊與發現時使用 如果是多台會共用名
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:13306/clouddb01?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: tony0204
+
+
+#mybatis:
+#  config-location: classpath:mybatis/mybatis.cfg.xml #MyBatis配置文件所在路徑
+#  type-aliases-package: org.tony.entities #所有Entity別名類所在包
+#  mapper-locations:
+#  - classpath:mybatis/mapper/**/*.xml #MyBatis映射文件的位置
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml #MyBatis映射文件的位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启SQL语句打印
+
+
+eureka:
+  client: #客戶端註冊近eureka服務列表內
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka.com7002:7002/eureka,http://eureka7003.com:7003/eureka #根據eureka服務端 defaultZone 的配置
+#  instance:
+#    instance-id: SpringCloudEx-dept8081 #Status取別名
+#    prefer-ip-address: true #訪問路徑可以顯示IP
+
+#eureka info
+info:
+  app.name: org.tony-SpringCloudEx
+  company.name: www.tony
+  build.artifactId: SpringCloudEx-provider-dept-8001
+  buid.version: 1.0-SNAPSHOT
+
+
+
+
+
+
+
+

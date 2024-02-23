@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent><!-- 子類李顯示聲明才能有明確的繼承關西 無意外就是父類默認版本否則自己定義 -->
+    <groupId>org.tony</groupId>
+    <artifactId>SpringCloudEx</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 當前Module名 -->
+  <artifactId>SpringCloudEx-api</artifactId>
+
+  <!--  給其他工程調用 -->
+<!--  <dependency>-->
+<!--    <groupId>org.tony</groupId>-->
+<!--    <artifactId>SpringCloudEx-api</artifactId>-->
+<!--    <version>1.0-SNAPSHOT</version>-->
+<!--  </dependency>-->
+
+
+
+
+
+  <dependencies>
+
+    <!-- 當前Module自己需要的依賴 如果服類有會直接繼承 可以復寫 -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+
+
+    <!-- feign 依賴 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-feign</artifactId>
+      <version>1.4.4.RELEASE</version>
+    </dependency>
+
+
+  </dependencies>
+
+
+
+</project>

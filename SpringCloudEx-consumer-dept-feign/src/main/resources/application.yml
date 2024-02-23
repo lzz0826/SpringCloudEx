@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+
+#Ribbon必須配合 eureka
+eureka:
+  client: #客戶端註冊近eureka服務列表內
+    register-with-eureka: false #false 表示不向註冊中心註冊自己
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka.com7002:7002/eureka,http://eureka7003.com:7003/eureka #根據eureka服務端 defaultZone 的配置
+
+# feign
+feign:
+  hystrix:
+    enabled: true #開啟fallbackFactory 配合@FeignClient(fallbackFactory = DeptClientServiceFallbackFactory.class)
+
+
+
+
+
+
+

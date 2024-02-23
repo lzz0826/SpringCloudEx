@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tony.dao.DeptDao">
+
+  <resultMap id="BaseResultMap" type="org.tony.entities.Dept">
+    <id column="deptne" property="deptno" jdbcType="BIGINT"/>
+    <result column="dname" property="dname" jdbcType="VARCHAR"/>
+    <result column="db_source" property="db_source" jdbcType="VARCHAR"/>
+  </resultMap>
+
+  <insert id="addDept" parameterType="org.tony.entities.Dept">
+    INSERT INTO dept(dname, db_source) VALUES (#{dname}, DATABASE());
+  </insert>
+
+  <select resultMap="BaseResultMap" id="findById" resultType="org.tony.entities.Dept">
+    SELECT * FROM dept Where deptne = #{id};
+  </select>
+
+
+  <select resultMap="BaseResultMap" id="findAll" resultType="org.tony.entities.Dept">
+    SELECT * FROM dept;
+  </select>
+
+</mapper>

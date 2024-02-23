@@ -1,0 +1,11 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: SpringCloudEx-config-dept-client #服務名*服務註冊與發現時使用 如果是多台會共用名(必須與bootstrap上的config.name一致)
+
+
+

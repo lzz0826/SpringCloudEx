@@ -1,0 +1,25 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: SpringCloudEx-config-client #服務名*服務註冊與發現時使用 如果是多台會共用名(必須與bootstrap上的config.name一致)
+
+
+# 如果github上找不到或是無法向配置中心取得會使用 application這裡的
+#server:
+#  port: 3355
+#spring:
+#  application:
+#    name: L-SpringCloudEx-config-client #服務名*服務註冊與發現時使用 如果是多台會共用名(必須與bootstrap上的config.name一致)
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://L-eureka-dev.com:7001/eureka/
+
+
+
+
+
+
+

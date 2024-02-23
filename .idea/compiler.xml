@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-provider-dept-8001/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-eureka-7001/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-eureka-7002/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-consumer-dept-feign/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-consumer-hystrix-dashboard/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-config-3344/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SpringCloudEx-config-eureka-client-7001/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringCloudEx-provider-dept-8001-hystrix" />
+        <module name="SpringCloudEx-config-eureka-client-7001" />
+        <module name="SpringCloudEx-config-client-3355" />
+        <module name="SpringCloudEx-api" />
+        <module name="SpringCloudEx-provider-dept-8001" />
+        <module name="SpringCloudEx-config-dept-client-8001" />
+        <module name="SpringCloudEx-consumer-hystrix-dashboard" />
+        <module name="SpringCloudEx-zuul-gateway-9527" />
+        <module name="SpringCloudEx-eureka-7001" />
+        <module name="SpringCloudEx-eureka-7002" />
+        <module name="SpringCloudEx-config-3344" />
+        <module name="SpringCloudEx-eureka-7003" />
+        <module name="SpringCloudEx-consumer-dept-feign" />
+        <module name="SpringCloudEx-consumer-dept-80" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringCloudEx-consumer-dept-80" options="" />
+    </option>
+  </component>
+</project>

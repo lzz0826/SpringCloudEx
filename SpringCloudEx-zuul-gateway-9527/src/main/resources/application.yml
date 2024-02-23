@@ -1,0 +1,39 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: SpringCloudEx-zuul-gateway #服務名*服務註冊與發現時使用 如果是多台會共用名
+
+eureka:
+  client: #客戶端註冊近eureka服務列表內
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka.com7002:7002/eureka,http://eureka7003.com:7003/eureka #根據eureka服務端 defaultZone 的配置
+  instance:
+    instance-id: gateway-9527.com #Status取別名
+    prefer-ip-address: true #訪問路徑可以顯示IP
+
+#  Zuul 網關配置
+zuul:
+  prefix: /tony #網關的前綴路徑
+  ignored-services: "*" #忽略的服務列表
+  routes:
+    mydept.serviceId: springcloudex-dept # 路由規則的服務 ID，即要路由到的微服務的標識符。
+    mydept.path: /mydept/** # 路由規則的路徑匹配規則，指定了要匹配的請求路徑。在這裏，/mydept/** 匹配了以 /mydept/ 開頭的任意路徑。
+
+#eureka info
+info:
+  app.name: org.tony-SpringCloudEx-gateway
+  company.name: www.tony
+  build.artifactId: $project.artifactId$
+  buid.version: $project.version$
+
+
+
+
+
+
+
+
+
+
